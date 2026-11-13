@@ -1,0 +1,26 @@
+[package]
+name = "headless-mention"
+version = "0.1.0"
+description = "Headless mention input logic for any UI toolkit: parse <@id> values into labelled parts, keep mentions intact through edits, and drive @-suggestions"
+readme = "../../README.md"
+keywords = ["mention", "text-input", "editor", "headless", "autocomplete"]
+categories = ["text-processing", "gui", "text-editors"]
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[features]
+fancy-regex = ["dep:fancy-regex"]
+
+[dependencies]
+fancy-regex = { version = "0.20.2", optional = true }
+regex = "1.13.1"
+similar = "3.2.1"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[lints]
+workspace = true
